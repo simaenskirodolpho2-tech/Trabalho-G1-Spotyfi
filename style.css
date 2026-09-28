@@ -1,3 +1,4 @@
+/* 1. VARIÁVEIS DE CORES */
 
 :root {
     --verde: #1ed760;
@@ -6,6 +7,7 @@
     --branco: #ffffff;
 }
 
+/* 2. CONFIGURAÇÃO GERAL */
 
 * {
     margin: 0;
@@ -20,6 +22,7 @@ body {
     min-height: 100vh;
 }
 
+/* 3. CABEÇALHO */
 
 header {
     background-color: #000000;
@@ -30,22 +33,25 @@ header h1 {
     font-size: 28px;
 }
 
+/* 4. CONTEÚDO PRINCIPAL */
 
 main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 30px;
     padding: 40px 20px;
 }
 
+/* 5. ÁREA DE LOGIN */
 
 .login {
-    .login {
     background-color: var(--cinza);
     width: 100%;
+    max-width: 450px;
     padding: 25px 20px;
     border-radius: 10px;
-}
 }
 
 .login h2 {
@@ -54,6 +60,7 @@ main {
     margin-bottom: 30px;
 }
 
+/* 6. FORMULÁRIO */
 
 form {
     display: flex;
@@ -67,6 +74,7 @@ label {
 }
 
 input {
+    width: 100%;
     padding: 15px;
     background-color: var(--preto);
     border: 1px solid #777777;
@@ -76,6 +84,7 @@ input {
     margin-bottom: 12px;
 }
 
+/* 7. BOTÃO */
 
 button {
     background-color: var(--verde);
@@ -93,14 +102,48 @@ button:hover {
     transform: scale(1.02);
 }
 
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--verde);
+    outline-offset: 3px;
+}
+
+/* 8. TEXTOS DO LOGIN */
 
 .login p {
     text-align: center;
     color: #b3b3b3;
     font-size: 12px;
-    margin-top: 25px;
+    line-height: 1.5;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
 
+/* 9. SEÇÃO PERSONALIZADA */
+
+.sobre-projeto {
+    background-color: var(--cinza);
+    width: 100%;
+    max-width: 450px;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.sobre-projeto h2 {
+    color: var(--verde);
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.sobre-projeto p {
+    color: var(--branco);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* 10. RODAPÉ */
 
 footer {
     text-align: center;
@@ -108,10 +151,12 @@ footer {
     color: #b3b3b3;
     font-size: 12px;
 }
+
+/* 11. RESPONSIVIDADE */
+
 @media (min-width: 768px) {
 
     .login {
-        max-width: 450px;
         padding: 40px;
     }
 
@@ -121,6 +166,10 @@ footer {
 
     .login h2 {
         font-size: 32px;
+    }
+
+    .sobre-projeto {
+        padding: 35px;
     }
 
 }
