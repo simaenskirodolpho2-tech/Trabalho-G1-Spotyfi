@@ -13,15 +13,40 @@
     </header>
 
     <main>
-        <section>
-            <h2>Entrar no Spotify</h2>
-            <p>Projeto acadêmico de Front-End</p>
+        <section class="login">
+
+        <h2>Entrar no Spotify</h2>
+
+        <form id="formulario-login">
+
+            <label for="email">E-mail</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Digite seu e-mail"
+                autocomplete="off"
+                required
+            >
+
+            <label for="senha">Senha demonstrativa</label>
+            <input
+                type="password"
+                id="senha"
+                name="senha"
+                placeholder="Digite uma senha fictícia"
+                autocomplete="off"
+                required
+            >
+
+            <button type="submit">Entrar</button>
+
+        </form>
+
+       
+
         </section>
     </main>
-
-    <footer>
-        <p>Desenvolvido para a disciplina de Front-End.</p>
-    </footer>
 
 </body>
 </html>
