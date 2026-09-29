@@ -1,4 +1,4 @@
-/* 1. VARIÁVEIS DE CORES */
+/* CORES */
 
 :root {
     --verde: #1ed760;
@@ -7,7 +7,7 @@
     --branco: #ffffff;
 }
 
-/* 2. CONFIGURAÇÃO GERAL */
+/* CONFIGURAÇÕES GERAIS */
 
 * {
     margin: 0;
@@ -22,45 +22,61 @@ body {
     min-height: 100vh;
 }
 
-/* 3. CABEÇALHO */
+/* LOGOTIPO */
 
 header {
-    background-color: #000000;
-    padding: 25px;
+    text-align: center;
+    padding: 40px 20px 10px;
 }
 
-header h1 {
-    font-size: 28px;
+.marca-spotify {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* 4. CONTEÚDO PRINCIPAL */
+.visualmente-oculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+/* CONTEÚDO PRINCIPAL */
 
 main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 30px;
-    padding: 40px 20px;
+    gap: 50px;
+    padding: 20px 20px 70px;
 }
 
-/* 5. ÁREA DE LOGIN */
+/* FORMULÁRIO */
 
 .login {
-    background-color: var(--cinza);
     width: 100%;
-    max-width: 450px;
-    padding: 25px 20px;
-    border-radius: 10px;
+    max-width: 325px;
 }
 
 .login h2 {
+    font-size: 42px;
     text-align: center;
-    font-size: 30px;
+    line-height: 1.2;
     margin-bottom: 30px;
 }
 
-/* 6. FORMULÁRIO */
+.login p {
+    text-align: center;
+    color: #b3b3b3;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
 
 form {
     display: flex;
@@ -69,57 +85,139 @@ form {
 }
 
 label {
-    font-weight: bold;
     font-size: 14px;
+    font-weight: bold;
 }
+
+/* CAMPOS */
 
 input {
     width: 100%;
     padding: 15px;
-    background-color: var(--preto);
-    border: 1px solid #777777;
-    border-radius: 5px;
-    color: var(--branco);
+    background-color: transparent;
+    border: 1px solid #727272;
+    border-radius: 4px;
+    color: white;
     font-size: 15px;
     margin-bottom: 12px;
 }
 
-/* 7. BOTÃO */
+input:hover {
+    border-color: white;
+}
 
-button {
+input:focus-visible {
+    outline: 2px solid var(--verde);
+    outline-offset: 2px;
+}
+
+/* BOTÃO VERDE */
+
+form button {
+    width: 100%;
     background-color: var(--verde);
-    color: #000000;
+    color: black;
     padding: 15px;
     border: none;
-    border-radius: 30px;
-    font-weight: bold;
+    border-radius: 50px;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
 }
 
-button:hover {
+form button:hover {
     background-color: #3be477;
     transform: scale(1.02);
 }
 
-button:focus-visible,
-input:focus-visible {
-    outline: 2px solid var(--verde);
-    outline-offset: 3px;
+/* OPÇÕES DE ACESSO */
+
+.opcoes-acesso {
+    width: 100%;
+    margin-top: 25px;
 }
 
-/* 8. TEXTOS DO LOGIN */
-
-.login p {
+.opcoes-acesso .separador {
     text-align: center;
-    color: #b3b3b3;
-    font-size: 12px;
-    line-height: 1.5;
-    margin-top: 15px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
-/* 9. SEÇÃO PERSONALIZADA */
+/* BOTÕES PRETOS */
+
+.opcoes-acesso button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    width: 100%;
+    min-height: 48px;
+    margin-bottom: 10px;
+    padding: 12px 40px;
+
+    background-color: transparent;
+    color: white;
+
+    border: 1px solid #727272;
+    border-radius: 50px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    opacity: 1;
+    cursor: not-allowed;
+}
+
+/* MANTER AS CORES DOS BOTÕES DESATIVADOS */
+
+.opcoes-acesso button:disabled {
+    background-color: transparent;
+    color: white;
+    opacity: 1;
+}
+
+.opcoes-acesso button:hover {
+    background-color: transparent;
+    transform: none;
+}
+
+/* ÍCONES */
+
+.icone {
+    position: absolute;
+    left: 20px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* AVISO */
+
+.opcoes-acesso .aviso-acesso {
+    text-align: center;
+    color: #b3b3b3;
+    font-size: 11px;
+    margin-top: 15px;
+}
+
+/* RESULTADO DO FORMULÁRIO */
+
+#resultado {
+    text-align: center;
+    color: var(--verde);
+    margin-top: 20px;
+}
+
+/* ACESSIBILIDADE */
+
+button:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+/* SEÇÃO PERSONALIZADA */
 
 .sobre-projeto {
     background-color: var(--cinza);
@@ -137,13 +235,13 @@ input:focus-visible {
 }
 
 .sobre-projeto p {
-    color: var(--branco);
+    color: white;
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 12px;
 }
 
-/* 10. RODAPÉ */
+/* RODAPÉ */
 
 footer {
     text-align: center;
@@ -151,21 +249,17 @@ footer {
     color: #b3b3b3;
     font-size: 12px;
 }
-
-/* 11. RESPONSIVIDADE */
+/*  */
+/* RESPONSIVIDADE */
 
 @media (min-width: 768px) {
 
-    .login {
-        padding: 40px;
-    }
-
     main {
-        padding: 70px 20px;
+        padding: 35px 20px 70px;
     }
 
     .login h2 {
-        font-size: 32px;
+        font-size: 46px;
     }
 
     .sobre-projeto {

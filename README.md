@@ -116,9 +116,7 @@ do Spotify e da página desenvolvida.
 
 | Spotify original | Meu projeto |
 |---|---|
-| ![Spotify original](imagens/spotify-original.png) | ![Meu projeto](imagens/meu-projeto.png) |
-
-### Diferenças entre as páginas
+| ![Spotify original](Imagens/spotify-original.png) | ![Meu projeto](Imagens/meu-projeto.png) |
 
 O projeto apresenta cores inspiradas no Spotify,
 um formulário centralizado e um botão verde.
